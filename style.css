@@ -1,0 +1,43 @@
+
+
+
+/* body { --safe-area-inset-top: env(safe-area-inset-top);
+    height: calc(100% + var(--safe-area-inset-top)); } */
+   
+
+.class-for-finally-lightbox { padding: 0; border: 0; margin:0; overflow: hidden; box-sizing: border-box; }
+
+.finally-lightbox-image-group { width:100%; max-width: 500px; margin:0 auto; box-sizing: border-box;  }
+.finally-lightbox-image-group > ul { padding: 0; margin: 0; border:0; list-style: none; display: block; }
+.finally-lightbox-image-group > ul li { padding: 5px; margin: 0; border:0; list-style: none; display:block; font-size: 0; line-height: 0; }
+.finally-lightbox-image-group img { width:100%; height:auto; padding: 0; margin: 0; }
+
+/*.finally-lightbox-widget-block { top:0; left:0; width:100%; height:100%; padding:0; background:rgba(0,0,0,0.8); z-index:9999; } */
+.finally-lightbox-widget-block { touch-action: none; position:fixed; top:0; left:0; right:0; bottom:0; padding:0; background:rgba(0,0,0,0.8); z-index:9999; } 
+/* .finally-lightbox-widget-block.hidden { visibility:hidden; } */
+.finally-lightbox-widget-block.hidden { display:none; }
+.finally-lightbox-widget-block .lightbox_wrapper { width:100%; height:100%; }
+.finally-lightbox-widget-block .lightbox { width:100%; height:100%; background:none; overflow:hidden; position:relative; }
+.finally-lightbox-widget-block .lightbox img { position:absolute; width:100%; height:auto; border-radius:3px; left:0; top:0; } 
+.finally-lightbox-widget-block .controls .button_previous { width:40px; height:40px; position:absolute; left:0; top:calc(50% - 20px); cursor:pointer; }
+.finally-lightbox-widget-block .controls .button_next { width:40px; height:40px; position:absolute; right:0; top:calc(50% - 20px); cursor:pointer; }
+.finally-lightbox-widget-block .controls .button_close { width:40px; height:40px; position:absolute; right:10px; top:10px; cursor:pointer; }  
+
+.finally-lightbox-widget-block .touch_controls { width:40px; position:absolute; right:20px; bottom:50px; }
+.finally-lightbox-widget-block .touch_control { width:40px; height:40px; margin:0 0 10px 0; background-position:center; background-repeat:no-repeat; background-size:contain;
+	background-color:rgba(0,0,0,0.6); border-radius:6px; }
+.finally-lightbox-widget-block .touch_control_button { width:40px; height:30px; position:absolute; right:20px; bottom:0;  margin:0; background-position:center; background-repeat:no-repeat; background-size:contain;
+	background-color:rgba(0,0,0,0.6); border-radius:6px 6px 0 0; }
+.finally-lightbox-widget-block .preloader { position:absolute; top:20px; left:20px;  margin:0; font-size: 12px; 
+    opacity:1; transition: opacity 1s; color:limegreen; }
+.finally-lightbox-widget-block .preloader.hidden { opacity:0; }
+
+/*
+.finally-lightbox-widget-block .touch_controls .touch_control.button_previous { background-image:url(../assets/images/img_previous_arrow_touch_1.svg); }
+.finally-lightbox-widget-block .touch_controls .touch_control.button_next { background-image:url(../assets/images/img_next_arrow_touch_1.svg); }
+.finally-lightbox-widget-block .touch_controls .touch_control.button_zoomplus { background-image:url(../assets/images/img_zoom_plus_touch_1.svg); }
+.finally-lightbox-widget-block .touch_controls .touch_control.button_zoomminus { background-image:url(../assets/images/img_zoom_minus_touch_1.svg); }
+.finally-lightbox-widget-block .touch_controls .touch_control.button_close { background-image:url(../assets/images/img_close_cross_touch_1.svg); } */
+
+
+.test_butt { position:absolute; left: 20px; bottom: 50px; }

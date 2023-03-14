@@ -1,0 +1,27 @@
+{
+    "name": "finally-lightbox-react",
+    "description": "A next-generation image viewer for the web with unlimited zoom, swipes, and full mobile support for a like-in-a-native-app user experience.",
+    "version": "0.0.1",
+    "homepage": "https://github.com/valery-designer/finally-lightbox-react",
+    "author": "Valery 'Designer' Kolchanov (https://valerydesigner.com)",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/valery-designer/finally-lightbox-react.git"
+    },
+    "bugs": {
+        "url": "https://github.com/valery-designer/finally-lightbox-react-dev/issues"
+    },
+    "license": "MIT",
+    "main": "index.jsx",
+    "engines": {
+        "node": ">=0.12.0"
+    },
+    "keywords": [
+        "viewer",
+        "image",
+        "gallery",
+        "lightbox",
+        "swipe",
+        "zoom"
+    ]
+}
