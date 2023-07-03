@@ -4,7 +4,7 @@ import SVG from 'finally-lightbox-react/svgs';
 import { CURTAIN_OPACITY, USE_FULL_SCREEN_BY_DEFAULT } from 'finally-lightbox-react/preferencies';
 import galleryCtrl from 'finally-lightbox-react/galleryctrl';
 
-class Lightbox extends React.Component {
+class Lightbox extends React.Component { 
 
     // constructor(props) {
     //     super(props);
