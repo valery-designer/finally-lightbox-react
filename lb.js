@@ -126,7 +126,7 @@ const lb = {
                 enumerable: true
             },
             'mode_': {
-                value: { controls:true, touchControls:true },
+                value: { controls:true, touchControls:false },
                 configurable:true
             },
             'mode': {
@@ -174,8 +174,6 @@ const lb = {
                 enumerable: true
             }
         });
-
-        // console.log('INIT STATE: ', this.state);
 
     },
 
@@ -241,17 +239,6 @@ const lb = {
         } 
     },
 
-    // componentDidMount() {
-    //     this.setAreaParams();
-    //     window.addEventListener('resize',this.resize);
-    //     document.addEventListener('fullscreenchange',this.fullscreenChange);        
-    // },
-
-    // componentWillUnmount(){ //console.log('COMPONENT UNMOUNTED!');
-    //     window.removeEventListener('resize',this.resize);
-    //     document.removeEventListener('fullscreenchange',this.fullscreenChange);
-    // },
-
     previewLoaded(e, i) {
         if(this.imgMems[i].currWidth === 0) {
             this.imgMems[i].currWidth = e.target.width;
@@ -293,12 +280,11 @@ const lb = {
 
     resize() {
         if(!lb.fullscreen.dontHandleResize) {
-            //console.log('RESIZE  HANDLED');
             lb.setAreaParams();
             lb.setSizeAndPosition();
             lb.setGhosts();
         }
-        else { //console.log('RESIZE SKIPPED');
+        else { 
             lb.fullscreen.dontHandleResize = false;
         }
     },
@@ -306,7 +292,6 @@ const lb = {
     fullscreenChange() {
         if(!lb.fullscreen.dontHandleFullscreen) {
             lb.fullscreen.on = document.fullscreenElement ? true : false;
-            //console.log('FULLSCREENCHANGE HANDLED');
             lb.setAreaParams();
             lb.setSizeAndPosition();
         }
@@ -770,7 +755,7 @@ const lb = {
         this.state.showFull = false;
         this.state.preloaderOn = false;
         this.state.img = { z:{w:0,h:0}, pos:{left:0, top:0} };
-        this.state.mode = { controls:true, touchControls:true };
+        this.state.mode = { controls:true, touchControls:false };
         // this.setState({
         //     showFull:false,
         //     preloaderOn:false,
@@ -806,7 +791,7 @@ const lb = {
         this.state.showFull = false;
         this.state.preloaderOn = false;
         this.state.img = { z:{w:0,h:0}, pos:{left:0, top:0} };
-        this.state.mode = { controls:true, touchControls:true };
+        this.state.mode = { controls:true, touchControls:false };
         // this.setState({
         //     showFull:false,
         //     preloaderOn:false,
@@ -855,8 +840,8 @@ const lb = {
             this.fullscreen.dontHandleFullscreen = true; // turn off standard fullscreenchange handler for one time
             this.setAreaParams(true); // set area BEFORE fullscreen request due weird behaviour of screen.width in V8 browsers in fullscreenchange handler
             this.countSizeAndPosition(); 
-            if (this.widgetBlock.current.requestFullscreen) await this.widgetBlock.current.requestFullscreen();
-            else if (this.widgetBlock.current.webkitRequestFullscreen) await this.widgetBlock.current.webkitRequestFullscreen(); /* Safari */
+            if (this.widgetBlock.requestFullscreen) await this.widgetBlock.requestFullscreen();
+            else if (this.widgetBlock.webkitRequestFullscreen) await this.widgetBlock.webkitRequestFullscreen(); /* Safari */
             this.fullscreen.on = document.fullscreenElement ? true : false;
             this.setdom(); 
         } else {

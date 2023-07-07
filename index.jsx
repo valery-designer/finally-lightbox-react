@@ -37,7 +37,7 @@ const Lightbox = ({lightboxReference}) => {
     const [showFull, setShowFull] = useState(false);
     const [preloaderOn, setPreloaderOn] = useState(false);
     const [img, setImg] = useState( { z:{w:0,h:0}, pos:{left:0, top:0} } );
-    const [mode, setMode] = useState( { controls:true, touchControls:true } );
+    const [mode, setMode] = useState( { controls:true, touchControls:false } );
     const [imgSrc, setImgSrc] = useState(SVG.loading);
     const [leftGhost, setLeftGhost] = useState( { src:'', z:{w:100,h:100}, pos:{left:0,top:0} } );
     const [rightGhost, setRightGhost] = useState( { src:'', z:{w:0,h:0}, pos:{left:0,top:0} } );
@@ -60,15 +60,11 @@ const Lightbox = ({lightboxReference}) => {
     const [n, setN] = useState(0); // --------------------- 
 
     const openInLightbox = (e,items) => {
-        console.log('clicked: ', items);
         lb.openInLightbox(e, items);
-        //lb.func1(d);
     }
     lightboxReference.current.openInLightbox = openInLightbox;
 
     // ==============  TEMPLATE ==============  
-
-    //console.log('galleryCtrl: ', lb);
 
     let controls = !mode.controls ? '' :
     <div className="controls">
