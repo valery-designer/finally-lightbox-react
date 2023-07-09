@@ -9,9 +9,9 @@ unstyled: /base/react-modal/
 
 # Finally! Image viewer
 
-<p class="description">A module that provides web applications with a modern lightbox, bringing image browsing user experience on a web page as close as possible one on a mobile (with even wider capabilities).</p>
+A module that provides web applications with a modern lightbox, bringing the user experience of viewing images on a web page as close as possible to that on a mobile device (with even wider capabilities).
 
-<!-- The component renders its `children` node in front of a backdrop component.
+The component renders its `children` node in front of a backdrop component.
 The `Modal` offers important features:
 
 - 💄 Manages modal stacking when one-at-a-time just isn't enough.
@@ -118,4 +118,4 @@ In the event the users need to interact with another part of the page, e.g. with
   ```
 
 - The [WAI-ARIA authoring practices](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/dialog/) can help you set the initial focus on the most relevant element, based on your modal content.
-- Keep in mind that a "modal window" overlays on either the primary window or another modal window. Windows under a modal are **inert**. That is, users cannot interact with content outside an active modal window. This might create [conflicting behaviors](#focus-trap). -->
+- Keep in mind that a "modal window" overlays on either the primary window or another modal window. Windows under a modal are **inert**. That is, users cannot interact with content outside an active modal window. This might create [conflicting behaviors](#focus-trap).
